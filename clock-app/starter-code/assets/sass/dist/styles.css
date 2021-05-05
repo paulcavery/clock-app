@@ -1,0 +1,812 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 800px;
+  width: 100vw;
+  max-height: 800px;
+  background-blend-mode: saturation;
+}
+body .quoteContainer {
+  display: block;
+  width: 90%;
+  height: 10rem;
+  padding: 2rem 1rem 10rem 2rem;
+  margin-bottom: 5rem;
+}
+body .quoteContainer p {
+  color: #fff;
+  font: 400 1rem "Inter", sans-serif;
+  line-height: 28px;
+  margin-bottom: 1rem;
+  padding-right: 3rem;
+  position: relative;
+}
+body .quoteContainer p i {
+  background: url("../../desktop/icon-refresh.svg") no-repeat;
+  background-size: 100%;
+  position: absolute;
+  right: 0.75rem;
+  top: 1rem;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+body .quoteContainer p i:hover {
+  cursor: pointer;
+}
+body .quoteContainer address {
+  color: #fff;
+  font: 700 1rem "Inter", sans-serif;
+}
+body .timeContainer {
+  display: block;
+  text-transform: uppercase;
+  color: #fff;
+  height: 50vh;
+  width: 100%;
+  padding-left: 2rem;
+}
+body .timeContainer h1 {
+  font: 400 1rem "Inter", sans-serif;
+  position: relative;
+  margin: 0 0 1rem 3rem;
+  letter-spacing: 4px;
+}
+body .timeContainer .time {
+  font: 700 6rem "Inter", sans-serif;
+}
+body .timeContainer .time span {
+  font: 400 1.1rem "Inter", sans-serif;
+  padding-bottom: 2rem;
+}
+body .timeContainer .location {
+  font: 700 1rem "Inter", sans-serif;
+  letter-spacing: 0.25rem;
+  padding-bottom: 2rem;
+}
+body .timeContainer .toggleButton {
+  background-color: #fff;
+  text-align: left;
+  height: 3rem;
+  width: 8rem;
+  border-radius: 100px;
+  position: relative;
+}
+body .timeContainer .toggleButton .moreLess {
+  text-transform: uppercase;
+  font: 400 1rem "Inter", sans-serif;
+  padding-left: 1rem;
+  letter-spacing: 4px;
+  color: #303030;
+}
+body .timeContainer .toggleButton .arrow {
+  background-size: 100%;
+  height: 2rem;
+  width: 2rem;
+  position: absolute;
+  right: 0.25rem;
+  top: 0.25rem;
+  border-radius: 50px;
+  color: #fff;
+}
+body .timeContainer .toggleButton:hover {
+  color: #999;
+}
+body .timeContainer .toggleButton:hover svg circle {
+  fill: #999;
+}
+body .expansion {
+  display: none;
+  height: 50vh;
+  width: 100%;
+  text-transform: uppercase;
+  background-color: rgba(255, 255, 255, 0.75);
+}
+body .expansion div {
+  display: block;
+}
+body .expansion h2 {
+  display: inline-block;
+  position: relative;
+  padding-top: 2.25rem;
+  padding-left: 1.5rem;
+  font: 400 0.7rem "Inter", sans-serif;
+  letter-spacing: 2px;
+}
+body .expansion p {
+  display: inline;
+  position: absolute;
+  right: 1.5rem;
+  padding-top: 2rem;
+  font: 700 1.25rem "Inter", sans-serif;
+}
+body .expansion .timeZoneHead {
+  padding-top: 4rem;
+}
+body .expansion .timeZone {
+  padding-top: 3.75rem;
+  font-size: 1rem;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  body .quoteContainer {
+    width: 75%;
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+  }
+  body .timeContainer {
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+  }
+  body .timeContainer .greeting {
+    font-size: 1.5rem;
+  }
+  body .timeContainer .time {
+    font-size: 10rem;
+  }
+  body .timeContainer .time span {
+    font-size: 1.5rem;
+  }
+  body .timeContainer .location {
+    font-size: 1.5rem;
+  }
+  body .expansion div {
+    display: inline-block;
+    width: 45%;
+    padding-top: 2.5rem;
+    margin-left: 1.5rem;
+  }
+  body .expansion div h2 {
+    display: block;
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    margin-bottom: 1rem;
+  }
+  body .expansion div p {
+    position: relative;
+    right: 0;
+    margin-left: 1.5rem;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+  }
+  body .expansion .weekDayContainer + .weekNumContainer {
+    padding-left: 2rem;
+  }
+}
+@media only screen and (min-width: 992px) {
+  body .quoteContainer {
+    width: 50%;
+    margin-bottom: 4rem;
+  }
+  body .timeContainer {
+    position: relative;
+    padding-top: 0;
+    margin-top: 0rem;
+    margin-bottom: 5rem;
+    padding-left: 3.5rem;
+    height: 50vh;
+  }
+  body .timeContainer .greeting {
+    font-size: 1.5rem;
+  }
+  body .timeContainer .time {
+    font-size: 10rem;
+  }
+  body .timeContainer .time span {
+    padding-left: 2rem;
+    font-size: 2rem;
+  }
+  body .timeContainer .location {
+    font-size: 2rem;
+  }
+  body .timeContainer .toggleButton {
+    position: absolute;
+    right: 1.5rem;
+    top: 20rem;
+    margin-right: 2rem;
+  }
+  body .expansion {
+    height: 60vh;
+  }
+  body .expansion div {
+    display: inline-block;
+    width: 45%;
+    padding-top: 2.5rem;
+    margin-left: 1.5rem;
+  }
+  body .expansion div h2 {
+    display: block;
+    font-size: 1.25rem;
+    letter-spacing: 3px;
+    margin-bottom: 1rem;
+  }
+  body .expansion div p {
+    position: relative;
+    right: 0;
+    margin-left: 1.5rem;
+    font-size: 2.75rem;
+    letter-spacing: 2px;
+  }
+  body .expansion .weekDayContainer {
+    margin-left: 5rem;
+    padding-left: 5rem;
+    border-left: 1px solid #fff;
+  }
+  body .expansion .weekNumContainer {
+    margin-left: 5rem;
+    padding-left: 5rem;
+    border-left: 1px solid #fff;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 800px;
+  width: 100vw;
+  max-height: 800px;
+  background-blend-mode: saturation;
+}
+body .quoteContainer {
+  display: block;
+  width: 90%;
+  height: 10rem;
+  padding: 2rem 1rem 10rem 2rem;
+  margin-bottom: 5rem;
+}
+body .quoteContainer p {
+  color: #fff;
+  font: 400 1rem "Inter", sans-serif;
+  line-height: 28px;
+  margin-bottom: 1rem;
+  padding-right: 3rem;
+  position: relative;
+}
+body .quoteContainer p i {
+  background: url("../../desktop/icon-refresh.svg") no-repeat;
+  background-size: 100%;
+  position: absolute;
+  right: 0.75rem;
+  top: 1rem;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+body .quoteContainer p i:hover {
+  cursor: pointer;
+}
+body .quoteContainer address {
+  color: #fff;
+  font: 700 1rem "Inter", sans-serif;
+}
+body .timeContainer {
+  display: block;
+  text-transform: uppercase;
+  color: #fff;
+  height: 50vh;
+  width: 100%;
+  padding-left: 2rem;
+}
+body .timeContainer h1 {
+  font: 400 1rem "Inter", sans-serif;
+  position: relative;
+  margin: 0 0 1rem 3rem;
+  letter-spacing: 4px;
+}
+body .timeContainer .time {
+  font: 700 6rem "Inter", sans-serif;
+}
+body .timeContainer .time span {
+  font: 400 1.1rem "Inter", sans-serif;
+  padding-bottom: 2rem;
+}
+body .timeContainer .location {
+  font: 700 1rem "Inter", sans-serif;
+  letter-spacing: 0.25rem;
+  padding-bottom: 2rem;
+}
+body .timeContainer .toggleButton {
+  background-color: #fff;
+  text-align: left;
+  height: 3rem;
+  width: 8rem;
+  border-radius: 100px;
+  position: relative;
+}
+body .timeContainer .toggleButton .moreLess {
+  text-transform: uppercase;
+  font: 400 1rem "Inter", sans-serif;
+  padding-left: 1rem;
+  letter-spacing: 4px;
+  color: #303030;
+}
+body .timeContainer .toggleButton .arrow {
+  background-size: 100%;
+  height: 2rem;
+  width: 2rem;
+  position: absolute;
+  right: 0.25rem;
+  top: 0.25rem;
+  border-radius: 50px;
+  color: #fff;
+}
+body .timeContainer .toggleButton:hover {
+  color: #999;
+}
+body .timeContainer .toggleButton:hover svg circle {
+  fill: #999;
+}
+body .expansion {
+  display: none;
+  height: 50vh;
+  width: 100%;
+  text-transform: uppercase;
+  background-color: rgba(255, 255, 255, 0.75);
+}
+body .expansion div {
+  display: block;
+}
+body .expansion h2 {
+  display: inline-block;
+  position: relative;
+  padding-top: 2.25rem;
+  padding-left: 1.5rem;
+  font: 400 0.7rem "Inter", sans-serif;
+  letter-spacing: 2px;
+}
+body .expansion p {
+  display: inline;
+  position: absolute;
+  right: 1.5rem;
+  padding-top: 2rem;
+  font: 700 1.25rem "Inter", sans-serif;
+}
+body .expansion .timeZoneHead {
+  padding-top: 4rem;
+}
+body .expansion .timeZone {
+  padding-top: 3.75rem;
+  font-size: 1rem;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  body .quoteContainer {
+    width: 75%;
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+  }
+  body .timeContainer {
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+  }
+  body .timeContainer .greeting {
+    font-size: 1.5rem;
+  }
+  body .timeContainer .time {
+    font-size: 10rem;
+  }
+  body .timeContainer .time span {
+    font-size: 1.5rem;
+  }
+  body .timeContainer .location {
+    font-size: 1.5rem;
+  }
+  body .expansion div {
+    display: inline-block;
+    width: 45%;
+    padding-top: 2.5rem;
+    margin-left: 1.5rem;
+  }
+  body .expansion div h2 {
+    display: block;
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    margin-bottom: 1rem;
+  }
+  body .expansion div p {
+    position: relative;
+    right: 0;
+    margin-left: 1.5rem;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+  }
+  body .expansion .weekDayContainer + .weekNumContainer {
+    padding-left: 2rem;
+  }
+}
+@media only screen and (min-width: 992px) {
+  body .quoteContainer {
+    width: 50%;
+    margin-bottom: 4rem;
+  }
+  body .timeContainer {
+    position: relative;
+    padding-top: 0;
+    margin-top: 0rem;
+    margin-bottom: 5rem;
+    padding-left: 3.5rem;
+    height: 50vh;
+  }
+  body .timeContainer .greeting {
+    font-size: 1.5rem;
+  }
+  body .timeContainer .time {
+    font-size: 10rem;
+  }
+  body .timeContainer .time span {
+    padding-left: 2rem;
+    font-size: 2rem;
+  }
+  body .timeContainer .location {
+    font-size: 2rem;
+  }
+  body .timeContainer .toggleButton {
+    position: absolute;
+    right: 1.5rem;
+    top: 20rem;
+    margin-right: 2rem;
+  }
+  body .expansion {
+    height: 60vh;
+  }
+  body .expansion div {
+    display: inline-block;
+    width: 45%;
+    padding-top: 2.5rem;
+    margin-left: 1.5rem;
+  }
+  body .expansion div h2 {
+    display: block;
+    font-size: 1.25rem;
+    letter-spacing: 3px;
+    margin-bottom: 1rem;
+  }
+  body .expansion div p {
+    position: relative;
+    right: 0;
+    margin-left: 1.5rem;
+    font-size: 2.75rem;
+    letter-spacing: 2px;
+  }
+  body .expansion .weekDayContainer {
+    margin-left: 5rem;
+    padding-left: 5rem;
+    border-left: 1px solid #fff;
+  }
+  body .expansion .weekNumContainer {
+    margin-left: 5rem;
+    padding-left: 5rem;
+    border-left: 1px solid #fff;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  body.dayMode {
+    background: rgba(0, 0, 0, 0.3) url("../../mobile/bg-image-daytime.jpg") no-repeat top;
+    background-size: cover;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  body.dayMode {
+    background: rgba(0, 0, 0, 0.3) url("../../tablet/bg-image-daytime.jpg") no-repeat top;
+    background-size: cover;
+  }
+}
+@media screen and (min-width: 992px) {
+  body.dayMode {
+    background: rgba(0, 0, 0, 0.3) url("../../desktop/bg-image-daytime.jpg") no-repeat top;
+    background-size: cover;
+  }
+}
+
+i.nightMode {
+  background: url("../../desktop/icon-sun.svg") no-repeat;
+  background-size: 100%;
+  height: 1.5rem;
+  width: 1.5rem;
+  position: absolute;
+  left: -3rem;
+}
+@media only screen and (min-width: 992px) {
+  i.nightMode {
+    top: 0.75rem;
+  }
+}
+
+.expansion.dayMode {
+  background-color: rgba(255, 255, 255, 0.75);
+}
+.expansion.dayMode h2 {
+  color: #fff;
+}
+.expansion.dayMode p {
+  color: #fff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 800px;
+  width: 100vw;
+  max-height: 800px;
+  background-blend-mode: saturation;
+}
+body .quoteContainer {
+  display: block;
+  width: 90%;
+  height: 10rem;
+  padding: 2rem 1rem 10rem 2rem;
+  margin-bottom: 5rem;
+}
+body .quoteContainer p {
+  color: #fff;
+  font: 400 1rem "Inter", sans-serif;
+  line-height: 28px;
+  margin-bottom: 1rem;
+  padding-right: 3rem;
+  position: relative;
+}
+body .quoteContainer p i {
+  background: url("../../desktop/icon-refresh.svg") no-repeat;
+  background-size: 100%;
+  position: absolute;
+  right: 0.75rem;
+  top: 1rem;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+body .quoteContainer p i:hover {
+  cursor: pointer;
+}
+body .quoteContainer address {
+  color: #fff;
+  font: 700 1rem "Inter", sans-serif;
+}
+body .timeContainer {
+  display: block;
+  text-transform: uppercase;
+  color: #fff;
+  height: 50vh;
+  width: 100%;
+  padding-left: 2rem;
+}
+body .timeContainer h1 {
+  font: 400 1rem "Inter", sans-serif;
+  position: relative;
+  margin: 0 0 1rem 3rem;
+  letter-spacing: 4px;
+}
+body .timeContainer .time {
+  font: 700 6rem "Inter", sans-serif;
+}
+body .timeContainer .time span {
+  font: 400 1.1rem "Inter", sans-serif;
+  padding-bottom: 2rem;
+}
+body .timeContainer .location {
+  font: 700 1rem "Inter", sans-serif;
+  letter-spacing: 0.25rem;
+  padding-bottom: 2rem;
+}
+body .timeContainer .toggleButton {
+  background-color: #fff;
+  text-align: left;
+  height: 3rem;
+  width: 8rem;
+  border-radius: 100px;
+  position: relative;
+}
+body .timeContainer .toggleButton .moreLess {
+  text-transform: uppercase;
+  font: 400 1rem "Inter", sans-serif;
+  padding-left: 1rem;
+  letter-spacing: 4px;
+  color: #303030;
+}
+body .timeContainer .toggleButton .arrow {
+  background-size: 100%;
+  height: 2rem;
+  width: 2rem;
+  position: absolute;
+  right: 0.25rem;
+  top: 0.25rem;
+  border-radius: 50px;
+  color: #fff;
+}
+body .timeContainer .toggleButton:hover {
+  color: #999;
+}
+body .timeContainer .toggleButton:hover svg circle {
+  fill: #999;
+}
+body .expansion {
+  display: none;
+  height: 50vh;
+  width: 100%;
+  text-transform: uppercase;
+  background-color: rgba(255, 255, 255, 0.75);
+}
+body .expansion div {
+  display: block;
+}
+body .expansion h2 {
+  display: inline-block;
+  position: relative;
+  padding-top: 2.25rem;
+  padding-left: 1.5rem;
+  font: 400 0.7rem "Inter", sans-serif;
+  letter-spacing: 2px;
+}
+body .expansion p {
+  display: inline;
+  position: absolute;
+  right: 1.5rem;
+  padding-top: 2rem;
+  font: 700 1.25rem "Inter", sans-serif;
+}
+body .expansion .timeZoneHead {
+  padding-top: 4rem;
+}
+body .expansion .timeZone {
+  padding-top: 3.75rem;
+  font-size: 1rem;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  body .quoteContainer {
+    width: 75%;
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+  }
+  body .timeContainer {
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+  }
+  body .timeContainer .greeting {
+    font-size: 1.5rem;
+  }
+  body .timeContainer .time {
+    font-size: 10rem;
+  }
+  body .timeContainer .time span {
+    font-size: 1.5rem;
+  }
+  body .timeContainer .location {
+    font-size: 1.5rem;
+  }
+  body .expansion div {
+    display: inline-block;
+    width: 45%;
+    padding-top: 2.5rem;
+    margin-left: 1.5rem;
+  }
+  body .expansion div h2 {
+    display: block;
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    margin-bottom: 1rem;
+  }
+  body .expansion div p {
+    position: relative;
+    right: 0;
+    margin-left: 1.5rem;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+  }
+  body .expansion .weekDayContainer + .weekNumContainer {
+    padding-left: 2rem;
+  }
+}
+@media only screen and (min-width: 992px) {
+  body .quoteContainer {
+    width: 50%;
+    margin-bottom: 4rem;
+  }
+  body .timeContainer {
+    position: relative;
+    padding-top: 0;
+    margin-top: 0rem;
+    margin-bottom: 5rem;
+    padding-left: 3.5rem;
+    height: 50vh;
+  }
+  body .timeContainer .greeting {
+    font-size: 1.5rem;
+  }
+  body .timeContainer .time {
+    font-size: 10rem;
+  }
+  body .timeContainer .time span {
+    padding-left: 2rem;
+    font-size: 2rem;
+  }
+  body .timeContainer .location {
+    font-size: 2rem;
+  }
+  body .timeContainer .toggleButton {
+    position: absolute;
+    right: 1.5rem;
+    top: 20rem;
+    margin-right: 2rem;
+  }
+  body .expansion {
+    height: 60vh;
+  }
+  body .expansion div {
+    display: inline-block;
+    width: 45%;
+    padding-top: 2.5rem;
+    margin-left: 1.5rem;
+  }
+  body .expansion div h2 {
+    display: block;
+    font-size: 1.25rem;
+    letter-spacing: 3px;
+    margin-bottom: 1rem;
+  }
+  body .expansion div p {
+    position: relative;
+    right: 0;
+    margin-left: 1.5rem;
+    font-size: 2.75rem;
+    letter-spacing: 2px;
+  }
+  body .expansion .weekDayContainer {
+    margin-left: 5rem;
+    padding-left: 5rem;
+    border-left: 1px solid #fff;
+  }
+  body .expansion .weekNumContainer {
+    margin-left: 5rem;
+    padding-left: 5rem;
+    border-left: 1px solid #fff;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  body.nightMode {
+    background: rgba(0, 0, 0, 0.5) url("../../mobile/bg-image-nighttime.jpg") no-repeat top;
+    background-size: 100%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  body.nightMode {
+    background: rgba(0, 0, 0, 0.5) url("../../tablet/bg-image-nighttime.jpg") no-repeat top;
+    background-size: 100%;
+  }
+}
+@media only screen and (min-width: 992px) {
+  body.nightMode {
+    background: rgba(0, 0, 0, 0.5) url("../../desktop/bg-image-nighttime.jpg") no-repeat top;
+    background-size: 100%;
+  }
+}
+body.nightMode i.nightMode {
+  background: url("../../desktop/icon-moon.svg") no-repeat;
+  background-size: 100%;
+  height: 1.5rem;
+  width: 1.5rem;
+  position: absolute;
+  left: -3rem;
+}
+@media only screen and (min-width: 992px) {
+  body.nightMode i.nightMode {
+    top: 0.75rem;
+  }
+}
+body.nightMode .expansion.nightMode {
+  background-color: #000;
+}
+body.nightMode .expansion.nightMode h2 {
+  color: #fff;
+}
+body.nightMode .expansion.nightMode p {
+  color: #fff;
+}

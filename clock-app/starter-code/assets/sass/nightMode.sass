@@ -1,0 +1,31 @@
+@import ./globalStyle
+body.nightMode
+
+    @media only screen and (max-width: 767px)
+
+        background: rgba(0, 0, 0, .5) url('../../mobile/bg-image-nighttime.jpg') no-repeat top
+        background-size: 100%
+    @media only screen and (min-width: 768px) and (max-width: 991px)
+
+        background: rgba(0, 0, 0, .5) url('../../tablet/bg-image-nighttime.jpg') no-repeat top
+        background-size: 100%
+    @media only screen and (min-width: 992px)
+
+        background: rgba(0, 0, 0, .5) url('../../desktop/bg-image-nighttime.jpg') no-repeat top
+        background-size: 100%
+    i.nightMode
+
+        background: url('../../desktop/icon-moon.svg') no-repeat
+        background-size: 100%
+        height: 1.5rem
+        width: 1.5rem
+        position: absolute
+        left: -3rem
+        @media only screen and (min-width: 992px)
+            top: .75rem
+    .expansion.nightMode
+        background-color: $black
+        h2
+            color: $white
+        p
+            color: $white

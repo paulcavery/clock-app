@@ -1,0 +1,219 @@
+$black: #000
+$lightBlack: #303030
+$white: #fff
+$hoverGray: #999
+$expansionBackground: rgba(255, 255, 255, .75)
+$filter: blur(40.7742px)
+$fontBold: 700
+$fontRegular: 400
+$fontFamily: 'Inter', sans-serif
+
+*
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+body
+    height: 800px
+    width: 100vw
+    max-height: 800px
+    background-blend-mode: saturation
+    .quoteContainer
+        display: block
+        width: 90%
+        height: 10rem
+        padding: 2rem 1rem 10rem 2rem
+        margin-bottom: 5rem
+
+        p
+            color: $white
+            font: $fontRegular 1rem $fontFamily
+            line-height: 28px
+            margin-bottom: 1rem
+            padding-right: 3rem
+            position: relative
+            i
+                background: url('../../desktop/icon-refresh.svg') no-repeat
+                background-size: 100%
+                position: absolute
+                right: .75rem
+                top: 1rem
+                width: 1.5rem
+                height: 1.5rem
+            i:hover
+                cursor: pointer
+
+        address
+            color: $white
+            font: $fontBold 1rem $fontFamily
+
+    .timeContainer
+        display: block
+        text-transform: uppercase
+        color: $white
+        height: 50vh
+        width: 100%
+        padding-left: 2rem
+        h1
+            font: $fontRegular 1rem $fontFamily
+            position: relative
+            margin: 0 0 1rem 3rem
+            letter-spacing: 4px
+        .time
+            font: $fontBold 6rem $fontFamily
+            span
+                font: $fontRegular 1.1rem $fontFamily
+                padding-bottom: 2rem
+        .location
+            font: $fontBold 1rem $fontFamily
+            letter-spacing: .25rem
+            padding-bottom: 2rem
+        .toggleButton
+            background-color: $white
+            text-align: left
+            height: 3rem
+            width: 8rem
+            border-radius: 100px
+            position: relative
+            .moreLess
+                text-transform: uppercase
+                font: $fontRegular 1rem $fontFamily
+                padding-left: 1rem
+                letter-spacing: 4px
+                color: $lightBlack
+
+            .arrow
+                background-size: 100%
+                height: 2rem
+                width: 2rem
+                position: absolute
+                right: .25rem
+                top: .25rem
+                border-radius: 50px
+                color: $white
+        .toggleButton:hover
+            color: $hoverGray
+            svg circle
+                fill: $hoverGray
+    .expansion
+        display: none
+        height: 50vh
+        width: 100%
+        text-transform: uppercase
+        background-color: $expansionBackground
+        div
+            display: block
+
+        h2
+            display: inline-block
+            position: relative
+            padding-top: 2.25rem
+            padding-left: 1.5rem
+            font: $fontRegular .7rem $fontFamily
+            letter-spacing: 2px
+        p
+            display: inline
+            position: absolute
+            right: 1.5rem
+            padding-top: 2rem
+            font: $fontBold 1.25rem $fontFamily
+        .timeZoneHead
+            padding-top: 4rem
+        .timeZone
+            padding-top: 3.75rem
+            font-size: 1rem
+
+    @media only screen and (min-width: 768px) and (max-width: 991px)
+        .quoteContainer
+            width: 75%
+            font-size: 1.4rem
+            letter-spacing: 2px
+
+        .timeContainer
+            padding-top: 5rem
+            padding-bottom: 2rem
+            .greeting
+                font-size: 1.5rem
+            .time
+                font-size: 10rem
+                span
+                    font-size: 1.5rem
+            .location
+                font-size: 1.5rem
+
+        .expansion
+            div
+                display: inline-block
+                width: 45%
+                padding-top: 2.5rem
+                margin-left: 1.5rem
+
+                h2
+                    display: block
+                    font-size: .8rem
+                    letter-spacing: 3px
+                    margin-bottom: 1rem
+
+                p
+                    position: relative
+                    right: 0
+                    margin-left: 1.5rem
+                    font-size: 1.8rem
+                    letter-spacing: 2px
+            .weekDayContainer + .weekNumContainer
+                padding-left: 2rem
+
+    @media only screen and (min-width: 992px)
+        .quoteContainer
+            width: 50%
+            margin-bottom: 4rem
+        .timeContainer
+            position: relative
+            padding-top: 0
+            margin-top: 0rem
+            margin-bottom: 5rem
+            padding-left: 3.5rem
+            height: 50vh
+
+            .greeting
+                font-size: 1.5rem
+            .time
+                font-size: 10rem
+                span
+                    padding-left: 2rem
+                    font-size: 2rem
+            .location
+                font-size: 2rem
+            .toggleButton
+                position: absolute
+                right: 1.5rem
+                top: 20rem
+                margin-right: 2rem
+
+        .expansion
+            height: 60vh
+            div
+                display: inline-block
+                width: 45%
+                padding-top: 2.5rem
+                margin-left: 1.5rem
+
+                h2
+                    display: block
+                    font-size: 1.25rem
+                    letter-spacing: 3px
+                    margin-bottom: 1rem
+
+                p
+                    position: relative
+                    right: 0
+                    margin-left: 1.5rem
+                    font-size: 2.75rem
+                    letter-spacing: 2px
+            .weekDayContainer
+                margin-left: 5rem
+                padding-left: 5rem
+                border-left: 1px solid $white
+            .weekNumContainer
+                margin-left: 5rem
+                padding-left: 5rem
+                border-left: 1px solid $white

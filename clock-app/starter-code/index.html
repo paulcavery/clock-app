@@ -10,11 +10,59 @@
 			sizes="32x32"
 			href="./assets/favicon-32x32.png"
 		/>
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="./assets/sass/dist/styles.css" />
 
 		<title>Frontend Mentor | Clock App</title>
 	</head>
-	<body>
-		, it's currently in More Less Current timezone Day of the year Day of the
-		week Week number
+	<body id="theme" class="nightMode">
+		<section class="quoteContainer">
+			<p class="quote">
+				<span id="quote"></span>
+				<i id="refresh" class="refresh"></i>
+			</p>
+			<address class="author">Push Refresh For A Quote</address>
+		</section>
+		<section class="timeContainer">
+			<h1 class="greeting">
+				<span id="greeting"></span><i class="nightMode"></i>
+			</h1>
+			<p class="time">11:37<span class="timeZoneAbb">EST</span></p>
+			<p class="location">in new york, US</p>
+			<button class="toggleButton" id="toggleExpand">
+				<span class="moreLess" id="moreLess">more</span>
+				<i class="arrow" id="arrow"
+					><img src="./assets/desktop/icon-arrow-down.svg" alt="" srcset=""
+				/></i>
+			</button>
+		</section>
+		<section class="expansion nightMode" id="expansion">
+			<div class="timeZoneContainer">
+				<h2 class="timeZoneHead">current timezone</h2>
+				<p class="timeZone">Lorem, ipsum.</p>
+			</div>
+			<div id="yearContainer" class="yearDayContainer">
+				<h2 class="yearDayHead">Day of the year</h2>
+				<p class="yearDay">235</p>
+			</div>
+			<div id="weekDayContainer" class="weekDayContainer">
+				<h2 class="weekDayHead">day of the week</h2>
+				<p class="weekDay">3</p>
+			</div>
+			<div class="weekNumContainer">
+				<h2 class="weekNumberHead">week number</h2>
+				<p class="weekNumber">56</p>
+			</div>
+		</section>
+		<!-- , it's currently in More Less Current timezone Day of the year Day of the
+		week Week number -->
 	</body>
+	<script src="https://d3js.org/d3.v6.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+	<script src="./src/app.js"></script>
+	<script src="./src/convertImage.js"></script>
 </html>
